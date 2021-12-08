@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 //import ReactDOM from 'react-dom';
 import Tweet from './Tweet';
 import './App.css'
 
 function App() {
+  const [users, setUsers] = useState([
+    { name: "Rohit", message: "Hello react" },
+    { name: "Jon Snow", message: "I am the true king!!!" },
+    { name: "CR7", message: "SIUUUU!!!!" }
+  ]);
+
   return (
     <div className="app">
-      <Tweet name="Rohit" message="HelloReact" />
-      <Tweet name="Jon Snow" message="I am the true king!!!" />
-      <Tweet name="CR7" message="SIUUUUUUUU!!!" />
+      {users.map(user =>
+        <Tweet name={user.name} message={user.message} />
+      )}
     </div>
   );
 }
