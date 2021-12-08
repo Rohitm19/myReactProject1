@@ -14,15 +14,11 @@ function App() {
 
   return (
     <div className="app">
-      {/* <Tweet name = "Rohit" message = "My react app"/>
-      <Tweet name = "Rohit" message = "My react app"/>
-      <Tweet name = "Rohit" message = "My react app"/>
-      <Tweet name = "Rohit" message = "My react app"/> */}
-      <h1 className= {isRed ? 'red' : ""}> Change my color! </h1> 
-      <button onclick={() => {increment();}}>Click here</button>
+
+      <h1 className={isRed ? 'red' : ""}> Change my color! </h1>
+      <button onClick={() => { increment(); }}>Click here</button>
       <h1>{count}</h1>
     </div>
   );
 }
-
 export default App;
