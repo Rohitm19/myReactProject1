@@ -14,3 +14,11 @@ Props are used to pass data, whereas state is for managing data. Data from props
 by a component that is receiving it from outside. State data can be modified by its own component, 
 but is private (cannot be accessed from outside).
 
+useEffect:
+What does useEffect do? By using this Hook, you tell React that your component needs to do something after render. 
+React will remember the function you passed (we'll refer to it as our “effect”), and call it later after performing 
+the DOM updates.
+whatever passed inside useEffect will be run as soon as dom gets loaded. and everytime the page refreshes or anything 
+renders on the page useEffect will keep on executing. We can stop the execution to only once by adding an empty aray as 
+a second argument. 
+  
