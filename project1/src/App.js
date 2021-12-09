@@ -1,22 +1,33 @@
-import React, { } from 'react';
-import { MovieProvider } from './MovieContext';
-import movieList from './movielist';
-import AddMovie from './AddMovie';
+import React from 'react';
+import Nav from './Nav';
+import About from './About';
+import Shop from './Shop';
 import './App.css'
-import Nav from './nav';
-import MovieList from './movielist';
+import { BrowserRouter as Router, Switch, Routes, Route } from 'react-router-dom';
 
-function App() {
- 
+const App = () => {
+
   return (
-    <MovieProvider>
+    <Router>
       <div className="app">
         <Nav />
-        <AddMovie />
-        <MovieList />
+        <Routes>    /// use Switch and exact for version 5 and Routes for version 6 of react-router-dom 
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/shop" element={<Shop />} />
+        </Routes>
       </div>
-    </MovieProvider>
+    </Router>
   );
 }
+
+const Home = () => {
+  return (
+    <div>
+      <h1>Home Page</h1>
+    </div>
+  )
+};
+
 export default App;
 

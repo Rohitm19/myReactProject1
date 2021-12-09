@@ -23,3 +23,8 @@ renders on the page useEffect will keep on executing. We can stop the execution 
 a second argument. 
   
 If you want to return something in REACT use paranthesis '()'. Whatever logic is put inside the () will be return.
+
+e is the event, which in this case is change, target is the element that triggered the event, which in this case is the input, 
+and value is the value of the input element
+
+The style attribute accepts a JavaScript object with camelCased properties rather than a CSS string.

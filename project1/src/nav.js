@@ -1,13 +1,27 @@
-import React, { useContext } from 'react';
-import { MovieContext } from './MovieContext';
+import React from 'react';
 import './App.css'
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
- const [movies, setMovies] = useContext(MovieContext);
+
+    const setStyle = {
+        color: 'white'
+    };
+//The style attribute accepts a JavaScript object with camelCased properties rather than a CSS string. 
+
     return (
-        <div >
-         <h1>Number of movies: {movies.length}</h1>
-        </div>
+        <nav>
+            <h3>Logo</h3>
+            <ul className='nav-links'>
+                <Link to="/about" style = {setStyle}>
+                    <li>About</li>
+                </Link>
+                <Link to="/shop" style = {setStyle}>
+                <li>Shop</li>
+            </Link>
+        </ul>
+        </nav >
+
     );
 }
 export default Nav;
