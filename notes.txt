@@ -22,3 +22,4 @@ whatever passed inside useEffect will be run as soon as dom gets loaded. and eve
 renders on the page useEffect will keep on executing. We can stop the execution to only once by adding an empty aray as 
 a second argument. 
   
+If you want to return something in REACT use paranthesis '()'. Whatever logic is put inside the () will be return.
